@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title><%= yield(:title) %></title>
+  <meta charset="utf-8" >
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=devise-width, initial-scale=1">
   <%= csrf_meta_tags %>
+
+  <%= render 'layouts/shim' %>
 </head>
 <body>
+	<%= render 'layouts/navbar' %>
+	
+	<div class="container">
+		<%= yield %>
+	</div>
 
-<%= yield %>
+	<div class="container">
+		<hr>
+		<%= render 'layouts/footer' %>
+	</div>
 
 </body>
 </html>
