@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-  	#@post = Post.find(params[:id])
+  	@post = Post.find(params[:id])
   end
 
   def update
@@ -36,8 +36,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-  	Post.find(params[:id]).destroy
+  	@post = Post.find(params[:id]).destroy
   	flash[:success] = "The post has been deleted"
+  	redirect_to dash_path
   end
 
   private 

@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  
+
   root 'posts#index'
+  get 'administration' => 'users#index'
+  get 'dash' => 'posts_dash#index'
+
   resources :posts
+
+  resources :users do
+    resources :posts
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

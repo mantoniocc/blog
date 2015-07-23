@@ -1,0 +1,38 @@
+<% provide(:title, "Posts Administration") %>
+<h1>Posts List</h1>
+
+<table class="table table-bordered">
+	<tr>
+		<th>Title</th>
+		<th>Author</th>
+		<th>Date</th>
+		<th>Operations</th>
+	</tr>
+	<% @posts.each do |post| %>
+	<tr>
+		<td><%= post.title %></td>
+		<td>Admin</td>
+		<td><%= time_ago_in_words(post.created_at) %></td>
+		<th>
+			<%= link_to post_path(post), class: "btn btn-default btn-sm" do %>
+				<i class="glyphicon glyphicon-eye-open"></i>
+			<% end %>
+			<%= link_to edit_post_path(post), class: "btn btn-default btn-sm" do %>
+				<i class="glyphicon glyphicon-edit"></i>
+			<% end %>
+			<%= link_to post_path(post), method: :delete, 
+																	 data: {confirm: 'Are you sure?'},
+			 														 class: "btn btn-danger btn-sm" do %>
+				<i class="glyphicon glyphicon-trash"></i>
+			<% end %>
+		</th>
+	</tr>
+	<% end %>
+	
+</table>
+<%= will_paginate @posts %>
+<div>
+<%= link_to "New post", new_post_path, class: "btn btn-primary" %>
+</div>
+
+

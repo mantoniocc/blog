@@ -1,6 +1,10 @@
 <% provide(:title, "#{@post.title}") %>
 <div class="page-header">
 	<h1><%= @post.title %></h1>
+	<p class="lead">
+			Posted by <%= link_to "Admin", root_path %>
+			on <%= time_ago_in_words(@post.created_at) %> ago
+		</p>
 </div>
 
 <p><%= @post.content %></p>
