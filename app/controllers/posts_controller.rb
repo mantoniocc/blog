@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-  	@posts = Post.paginate(:page => params[:page], :per_page => 5)
+  	@posts = Post.paginate(:page => params[:page], :per_page => 5).order(created_at: :desc)
   end
 
   def show
@@ -38,7 +38,7 @@ class PostsController < ApplicationController
   def destroy
   	@post = Post.find(params[:id]).destroy
   	flash[:success] = "The post has been deleted"
-  	redirect_to dash_path
+  	redirect_to dashboard_path
   end
 
   private 

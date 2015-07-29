@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Post.create(title: "Amazing Post", content: "On the other hand, we denounce with righteous indignation and 
+Post.create(title: "Networking and Hacking", content: "On the other hand, we denounce with righteous indignation and 
 	dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by 
 	desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs 
 	to those who fail in their duty through weakness of will, which is the same as saying through shrinking 
@@ -18,7 +18,7 @@ Post.create(title: "Amazing Post", content: "On the other hand, we denounce with
 	selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid 
 	worse pains.")
 
-Post.create(title: "The technology", content: "On the other hand, we denounce with righteous indignation and 
+Post.create(title: "The technology is amazing", content: "On the other hand, we denounce with righteous indignation and 
 	dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by 
 	desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs 
 	to those who fail in their duty through weakness of will, which is the same as saying through shrinking 
@@ -42,7 +42,7 @@ Post.create(title: "My experience with the programming languages", content: "Wit
 	selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid 
 	worse pains.")
 
-Post.create(title: "Great Post", content: "On the other hand, we denounce with righteous indignation and 
+Post.create(title: "Trends technology", content: "On the other hand, we denounce with righteous indignation and 
 	dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by 
 	desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs 
 	to those who fail in their duty through weakness of will, which is the same as saying through shrinking 
@@ -66,7 +66,7 @@ Post.create(title: "The Computer Science", content: "On the other hand, we denou
 	selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid 
 	worse pains.")
 
-Post.create(title: "Security in the browsers", content: "With righteous indignation and 
+Post.create(title: "Security in browsers", content: "With righteous indignation and 
 	dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by 
 	desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs 
 	to those who fail in their duty through weakness of will, which is the same as saying through shrinking 

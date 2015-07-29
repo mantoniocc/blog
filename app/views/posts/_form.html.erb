@@ -1,17 +1,5 @@
 <%= form_for(@post) do |f| %>
-	<% if @post.errors.any? %>
-		<div class="alert alert-danger">
-			<strong>
-				<%= pluralize(@post.errors.count, "error") %>
-				prevented you from create a post:
-			</strong>
-			<ul>
-				<% @post.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
+	<%= render 'shared/error_messages', object: f.object %>
 		<div class="form-group">
 			<%= f.label :title %>
 			<%= f.text_field :title, class: "form-control" %>
@@ -20,6 +8,6 @@
 			<%= f.label :content, "Your post" %>
 			<%= f.text_area :content, class: "form-control" %>
 		</div>
+		<%= link_to "Back", dashboard_path, class: "btn btn-default" %>
 		<%= f.submit "Save", class: "btn btn-primary" %>
-
 <% end %>
