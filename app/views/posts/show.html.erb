@@ -8,3 +8,47 @@
 </div>
 
 <p><%= @post.content %></p>
+<hr>
+<h3>
+	<%= pluralize(@post.comments.count, 'comment') %>:
+</h3>
+<% @post.comments.each do |comment| %>
+	<div class="panel panel-default">
+  	<div class="panel-body">
+   		<p>
+				<strong><%= comment.name %>:</strong>
+				
+			</p>
+
+			<p>
+				<%= comment.content %>
+			</p>
+			<span class="quiet"><small><%= time_ago_in_words(comment.created_at) %> ago</small></span>
+  	</div>
+	</div>
+<% end %>
+<div class="row">
+<div class="col-md-6 col-md-offset-3 center">
+	<div class="panel panel-default">
+	  <div class="panel-body">
+	    <%= form_for([@post, Comment.new]) do |f| %>
+		<div class="form-group">
+			<%= f.label :name %>
+			<%= f.text_field :name, class: "form-control" %>
+		</div>
+		<div class="form-group">
+			<%= f.label :email %>
+			<%= f.email_field :email, class: "form-control" %>
+		</div>
+		<div class="form-group">
+			<%= f.label :content, "Your comment" %>
+			<%= f.text_area :content, rows: 4, class: "form-control" %>
+		</div>
+	  </div>
+	  <div class="panel-footer">
+	  	<%= f.submit "Publish", class: "btn btn-success" %>
+	  </div>
+	</div>
+	<% end %>
+</div>
+</div>
