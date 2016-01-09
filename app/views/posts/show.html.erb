@@ -23,7 +23,9 @@
 			<p>
 				<%= comment.content %>
 			</p>
-			<span class="quiet"><small><%= time_ago_in_words(comment.created_at) %> ago</small></span>
+			<hr>
+			<%= link_to "Reply", "#" %> &darr;
+			<span class="glyphicon glyphicon-time pull-right"><small> <%= time_ago_in_words(comment.created_at) %> ago</small></span>
   	</div>
 	</div>
 <% end %>
